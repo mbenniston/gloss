@@ -1,0 +1,4 @@
+symbol,         en,                                                                     de  
+Hello_world,    "Hello world",                                                          "Hallo Welt"
+Translate_me,   "This is a translation",                                                "Dies ist eine Übersetzung"
+Format_me,      "This ia a formated translation with {firstArgument} {secondArgument}", "Dies ist eine formatierte Übersetzung mit {firstArgument} {secondArgument}"
