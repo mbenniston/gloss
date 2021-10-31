@@ -13,5 +13,6 @@ set_project_warnings(gloss_project_warnings)
 include(cmake/Sanitizers.cmake)
 enable_sanitizers(gloss_project_options)
 
+add_subdirectory(gloss-reader)
 add_subdirectory(gloss)
 add_subdirectory(gloss-example)
