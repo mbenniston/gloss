@@ -1,6 +1,7 @@
 #include "StringViewScanner.hpp"
 
 #include <stdexcept>
+#include <cctype>
 
 bool StringViewScanner::atEnd() const 
 {

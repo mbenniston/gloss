@@ -4,15 +4,16 @@
 #include <algorithm>
 #include <string_view>
 #include <optional>
+#include <string>
 
 static constexpr const char* const HEADER_SYMBOL = "symbol";
 
-static constexpr bool isValidSymbolStartChar(char c)
+static bool isValidSymbolStartChar(char c)
 {
     return std::isalpha(c);
 }
 
-static constexpr bool isValidSymbolInfixChar(char c)
+static bool isValidSymbolInfixChar(char c)
 {
     return std::isalnum(c) || c == '_';
 }
@@ -28,8 +29,8 @@ static bool startswith(const std::string_view str, const std::string_view start,
         }
     }
 
-    std::string_view strCut(strStart, 
-        static_cast<std::size_t>(std::distance(strStart, str.end())));
+    std::string_view strCut{ &(*strStart), 
+        static_cast<std::size_t>(std::distance(strStart, str.end()))};
 
     return strCut.size() >= start.size() && strCut.substr(0, start.size()) == start;
 }
